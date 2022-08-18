@@ -39,7 +39,7 @@
   display: flex;
   flex: 1;
   background: rgba(255, 255, 255, 0.2);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -53,6 +53,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  font-size: 0.8rem;
 }
 
 .title {
@@ -137,16 +138,28 @@
 
 @media (max-width: 600px) {
 
+  .container button {
+    font-size: 0.8rem;
+  }
+
   .title {
     font-size: 2rem;
   }
 
   .mainInfo {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .card p {
-      font-size: 1rem;
+      font-size: 0.8rem;
+  }
+
+  .footer {
+    padding: 0rem 0;
+  }
+
+  .footer p {
+    font-size: 0.5rem;
   }
 }
 
