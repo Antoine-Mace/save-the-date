@@ -137,7 +137,6 @@
 }
 
 @media (max-width: 600px) {
-
   .container button {
     font-size: 0.8rem;
   }
@@ -150,8 +149,13 @@
     font-size: 1rem;
   }
 
+  .card {
+    border-width: 3px !important;
+  }
+
   .card p {
       font-size: 0.8rem;
+      line-height: 1;
   }
 
   .footer {
