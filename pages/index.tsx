@@ -62,7 +62,13 @@ const Home: NextPage = () => {
         ></link>
       </Head>
 
-      <video autoPlay muted loop className={styles.backgound}>
+      <video
+        playsInline
+        autoPlay
+        muted
+        loop
+        className={styles.backgound}
+      >
         <source src="/wedding.mp4" type="video/mp4"></source>
       </video>
 
