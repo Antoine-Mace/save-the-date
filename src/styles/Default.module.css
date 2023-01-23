@@ -1,0 +1,403 @@
+.container {
+  text-align: right;
+  color: black;
+  white-space: break-spaces;
+}
+
+
+.container hr {
+  width: 50%;
+  height: 2px;
+  border-color: black;
+  background-color: black;
+}
+
+.container button {
+  background: transparent !important;
+  border-radius: 0px !important;
+  border: none;
+  box-shadow: none !important;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: inherit;
+}
+
+.container svg {
+  fill: black !important;
+}
+
+.navbar {
+  z-index: 1;
+  display: flex;
+  padding-left: 15px;
+}
+
+.navbarItem,
+.navbarItemActive {
+  font-family: 'Courier New',
+    Courier,
+    monospace;
+  color: black;
+  border-radius: 5px;
+  padding: 0px 25px;
+  margin: 0px 15px;
+  cursor: pointer;
+  border: 1px solid white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0px;
+  transition: color 0.15s ease,
+    border-color 0.15s ease;
+  text-align: center;
+  transform: skew(-15deg);
+  height: 40px;
+}
+
+.navbarItemActive {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  color: black;
+  background-color: white;
+}
+
+.navbarItem svg {
+  height: 12px;
+}
+
+.navbarItemActive svg {
+  height: 12px;
+}
+
+.navbarItem:hover {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.backgound {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes onLoad {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.main {
+  animation: 1s ease-out 0s 1 onLoad;
+  padding-top: 25px;
+  min-height: calc(100vh - 210px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: fixed; */
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-family: 'Courier New',
+    Courier,
+    monospace
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 15px;
+  margin: 15px;
+}
+
+.infoCard {
+  padding: 0px 25px;
+  margin: 30px;
+  padding-bottom: 10px;
+  max-width: 500px;
+  min-width: 250px;
+  background: white;
+  font-family: 'Courier New',
+    Courier,
+    monospace;
+  text-align: left;
+  transform: skew(-5deg);
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.infoCard a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 0.5rem 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 0.8rem;
+}
+
+.title {
+  margin: 0;
+  margin-top: 150px;
+  font-size: 2.5rem;
+  font-family: 'League Script', serif;
+  text-align: center;
+  color: inherit;
+}
+
+.mainInfo {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.mainInfo a {
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.mainInfo a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.backgound {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  background-color: white;
+  border-radius: 0px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  text-align: center;
+  transform: skew(-15deg);
+  cursor: pointer;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  transform: skew(15deg);
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .container button {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .mainInfo {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    justify-content: space-evenly;
+    padding-right: 15px;
+  }
+
+  .navbarItem,
+  .navbarItemActive {
+    font-size: 0.8rem;
+    line-height: 1;
+    height: 40px;
+    margin: 0px;
+    padding: 20px;
+  }
+
+
+  .navbarItem svg,
+  .navbarItemActive svg {
+    height: 0.5rem;
+  }
+
+  .card {
+    border-width: 3px !important;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  .infoCard {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 0rem 0;
+  }
+
+  .footer p {
+    font-size: 0.5rem;
+  }
+}
+
+.link {
+  padding: 15px;
+  transition: color .15s ease,
+    background-color .15s ease;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .container hr {
+    border-color: white;
+    background-color: white;
+  }
+
+  .link:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .container {
+    color: white;
+  }
+
+  .backgound {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .navbarItem,
+  .navbarItemActive {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-color: black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    height: 45px;
+  }
+
+  .navbarItemActive {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    color: white;
+    background-color: black;
+  }
+
+  .navbarItem:hover {
+    color: white;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+
+  .infoCard {
+    background: black;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+  }
+
+  .mainInfo a:hover {
+    color: white;
+  }
+
+  .container button {
+    color: white;
+  }
+
+  .container svg {
+    fill: white !important;
+  }
+
+  .card {
+    background-color: black;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+  }
+
+  .card:hover {
+    color: white;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+  }
+
+}
