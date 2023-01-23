@@ -21,7 +21,7 @@ const Info: NextPage = () => {
                 <div className={styles.infoCard}>
                     <h2>{t("whereTitle")}</h2>
                     <p>
-                        <a href="https://goo.gl/maps/WDnfZMKcNV65ZeVB8" target="_blank">
+                        <a href="https://goo.gl/maps/WDnfZMKcNV65ZeVB8" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faMapPin} /> {t("weddingLocation")}
                         </a>
                     </p>

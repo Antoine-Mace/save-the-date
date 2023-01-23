@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         {t("weddingDateAndTime")}
         <br></br>
         <br></br>
-        <a href="https://goo.gl/maps/WDnfZMKcNV65ZeVB8" target="_blank" className={styles.link}>
+        <a href="https://goo.gl/maps/WDnfZMKcNV65ZeVB8" rel="noreferrer" target="_blank" className={styles.link}>
             <FontAwesomeIcon icon={faMapPin} /> {t("weddingLocation")}
           </a>
       </h2>

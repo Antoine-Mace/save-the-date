@@ -18,18 +18,6 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
 
     const navbarItemClass = (path?: string) => router.pathname === path ? styles.navbarItemActive : styles.navbarItem;
 
-    // useEffect(() => {
-    //     window.onscroll = function () { scrollFunction() };
-
-    //     function scrollFunction() {
-    //         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    //             document.getElementById("navbar").style.backgroundColor = "black";
-    //         } else {
-    //             document.getElementById("navbar").style.fontSize = "transparent";
-    //         }
-    //     }
-    // }, [])
-
     return (
         <div className={styles.container}>
             <Head>
@@ -39,15 +27,6 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
                     name="viewport"
                     content="width=device-width, height=device-height, initial-scale=1"
                 />
-                <link rel="icon" href="/favicon.ico" />
-                <link
-                    rel="stylesheet"
-                    href="https://fonts.googleapis.com/css?family=League+Script"
-                ></link>
-                <link
-                    rel="stylesheet"
-                    href="https://fonts.googleapis.com/css?family=Courier+New"
-                ></link>
             </Head>
 
             <video
@@ -84,6 +63,7 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
                 <a
                     className={navbarItemClass()}
                     target="_blank"
+                    rel="noreferrer"
                     href="https://forms.gle/EZonTT83boCHZTMWA"
                 >
                     <p>RSVP</p>
@@ -95,7 +75,7 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
                 {children}
             </main>
             <footer className={styles.footer}>
-                <p>Bonnie & <a target="_blank" href="https://www.antoinemace.com">Antoine Macé</a> © 2023</p>
+                <p>Bonnie & <a rel="noreferrer" target="_blank" href="https://www.antoinemace.com">Antoine Macé</a> © 2023</p>
             </footer>
 
         </div >

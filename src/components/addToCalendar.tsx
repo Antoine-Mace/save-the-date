@@ -6,7 +6,9 @@ import { useTranslation } from "next-i18next";
 const AddToCalendar = () => {
     const { t } = useTranslation("common");
 
-    useEffect(atcb_init, []);
+    useEffect(() => {
+        atcb_init()
+    }, []);
 
     const event = useMemo(
         () =>
@@ -29,7 +31,7 @@ const AddToCalendar = () => {
                 ],
                 iCalFileName: "Reminder-Event",
             }),
-        []
+        [t]
     );
 
     return <div className="atcb">{event}</div>
