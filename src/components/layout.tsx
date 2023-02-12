@@ -64,9 +64,9 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
                     className={navbarItemClass()}
                     target="_blank"
                     rel="noreferrer"
-                    href="https://forms.gle/EZonTT83boCHZTMWA"
+                    href="https://forms.gle/forfcoWhudKuxVYn7"
                 >
-                    <p>RSVP</p>
+                    <p>{t("chooseYourMenu")}</p>
                 </a>
             </nav>
 
