@@ -62,6 +62,10 @@ const Info: NextPage = () => {
                     <h2>{t("dressCodeTitle")}</h2>
                     <p>{t("dressCodeText")}</p>
                 </div>
+                <div className={styles.infoCard}>
+                    <h2>{t("giftTitle")}</h2>
+                    <p dangerouslySetInnerHTML={{ __html: t("giftText") }} />
+                </div>
             </div>
         </Layout >
     );
