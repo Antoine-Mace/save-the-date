@@ -1,8 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💌 Save the Date
 
-## Getting Started
+A simple, elegant **Next.js + TypeScript** site for sharing wedding details with guests — built with multi-language support so every guest can read it in their own language.
 
-First, run the development server:
+🔗 **Live site:** [wedding.bonnie.and.antoinemace.com](https://wedding.bonnie.and.antoinemace.com/)
+
+## ✨ Features
+
+- 🌍 **Multi-language support** — powered by [`next-i18next`](https://github.com/i18next/next-i18next), so the page automatically adapts to guests' preferred language
+- 📅 **Add to Calendar** button — guests can save the date directly to Google, Apple, Outlook, and more via [`add-to-calendar-button`](https://github.com/add2cal/add-to-calendar-button)
+- Light & Dark Mode support
+- 🎨 Clean, responsive design with [Font Awesome](https://fontawesome.com/) icons
+- ⚡ Built on [Next.js](https://nextjs.org/) with TypeScript for type safety
+- ☁️ Deployed on [Netlify](https://www.netlify.com/)
+
+## 🛠 Tech Stack
+
+| Category | Tool |
+|---|---|
+| Framework | [Next.js](https://nextjs.org/) |
+| Language | TypeScript |
+| UI | React |
+| i18n | next-i18next |
+| Icons | Font Awesome |
+| Calendar integration | add-to-calendar-button |
+| Hosting | Netlify |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm or Yarn
+
+### Installation
+
+```bash
+git clone https://github.com/Antoine-Mace/save-the-date.git
+cd save-the-date
+npm install
+# or
+yarn install
+```
+
+### Run locally
 
 ```bash
 npm run dev
@@ -10,25 +50,38 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the site.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Other scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run build   # build for production
+npm run start   # start the production server
+npm run lint    # lint the project
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📁 Project Structure
 
-## Learn More
+```
+save-the-date/
+├── pages/          # Next.js pages (including API routes under pages/api)
+├── public/         # Static assets (images, favicon, etc.)
+├── src/            # Components, styles, and shared code
+├── next-i18next.config.js  # i18n configuration
+├── next.config.js  # Next.js configuration
+└── netlify.toml    # Netlify deployment configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Adding a Language
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Add a new locale folder under your translations directory (following the `next-i18next` structure).
+2. Add the locale code to `next-i18next.config.js`.
+3. Translate the existing keys into the new language.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📦 Deployment
 
-## Deploy on Vercel
+This project is configured for [Netlify](https://www.netlify.com/) via `netlify.toml`. Pushing to the main branch triggers an automatic deploy. It can also be deployed on [Vercel](https://vercel.com/) or any platform that supports Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is a personal wedding website. Feel free to fork it as a template for your own save-the-date site! 💍

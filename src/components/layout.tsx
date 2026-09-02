@@ -5,9 +5,9 @@ import styles from "../styles/Default.module.css";
 import { useTranslation } from "next-i18next";
 
 import AddToCalendar from "./addToCalendar";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faCode } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
 import Link from 'next/link'
 
@@ -17,6 +17,8 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
     const { t } = useTranslation("common");
 
     const navbarItemClass = (path?: string) => router.pathname === path ? styles.navbarItemActive : styles.navbarItem;
+
+    const year = useMemo(() => new Date().getFullYear(), []);
 
     return (
         <div className={styles.container}>
@@ -28,6 +30,14 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
                     content="width=device-width, height=device-height, initial-scale=1"
                 />
             </Head>
+<a
+               href="https://github.com/Antoine-Mace/save-the-date"
+    target="_blank"
+    rel="noreferrer"
+    className={styles.githubBanner}
+>
+    <FontAwesomeIcon icon={faCode} />Made with 💚 — Use this as your own save-the-date, open source on GitHub
+</a>
 
             <video
                 playsInline
@@ -75,7 +85,7 @@ const Layout: NextPage<{ children: any }> = ({ children }) => {
                 {children}
             </main>
             <footer className={styles.footer}>
-                <p>Bonnie & <a rel="noreferrer" target="_blank" href="https://www.antoinemace.com">Antoine Macé</a> © 2023</p>
+                <p>Bonnie & <a rel="noreferrer" target="_blank" href="https://www.antoinemace.com">Antoine Macé</a> © {year}</p>
             </footer>
 
         </div >

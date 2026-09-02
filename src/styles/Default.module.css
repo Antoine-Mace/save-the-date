@@ -401,3 +401,25 @@
   }
 
 }
+
+.githubBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: black;
+  background-color: #0FBF3E;
+  text-decoration: none;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.githubBanner:hover {
+  background-color: #909692;
+}
