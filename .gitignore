@@ -1,4 +1,14 @@
-
 .next/*
 node_modules/*
 src/styles/.Home.module.css.icloud
+
+# local env files
+.env
+.env*.local
+
+# build / tooling artifacts
+*.tsbuildinfo
+.netlify/
+
+# macOS
+.DS_Store

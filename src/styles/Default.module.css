@@ -27,10 +27,20 @@
   fill: black !important;
 }
 
+.calendarButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
 .navbar {
   z-index: 1;
   display: flex;
-  padding-left: 15px;
+  padding: 15px;
 }
 
 .navbarItem,
@@ -176,7 +186,7 @@
   margin: 0;
   margin-top: 150px;
   font-size: 2.5rem;
-  font-family: 'League Script', serif;
+  font-family: var(--font-league-script), serif;
   text-align: center;
   color: inherit;
 }
@@ -203,6 +213,9 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  /* Stay centred horizontally but keep the top of the video (usually the couple's faces) in frame.
+     CUSTOMIZE: adjust (e.g. `center 30%`) if the important part of your video sits lower. */
+  object-position: center top;
   position: fixed;
   left: 0;
   right: 0;
@@ -253,7 +266,17 @@
   margin-left: 0.5rem;
 }
 
+@media (max-width: 800px) {
+  .navbar {
+    margin-top: 45px;
+  }
+}
+
 @media (max-width: 600px) {
+  .calendarButton {
+    right: 10px;
+  }
+
   .container button {
     font-size: 0.8rem;
   }
@@ -402,24 +425,66 @@
 
 }
 
-.githubBanner {
+/* CUSTOMIZE: optional, change the green accent (#0FBF3E) to match your theme. */
+.githubBadge {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid black;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
   color: black;
   background-color: #0FBF3E;
   text-decoration: none;
-  z-index: 1000;
-  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: background-color .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
 }
 
-.githubBanner:hover {
-  background-color: #909692;
+.githubBadge svg {
+  flex-shrink: 0;
+}
+
+.githubBadge:hover {
+  color: white;
+  background-color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.githubBadge:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px black;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .githubBadge {
+    transition: none;
+  }
+
+  .githubBadge:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-bottom: 72px;
+  }
+
+  .githubBadge {
+    bottom: 12px;
+    right: 12px;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.95rem;
+  }
 }

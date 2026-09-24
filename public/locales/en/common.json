@@ -23,6 +23,8 @@
   "dressCodeTitle": "Dress code",
   "dressCodeText": "We expect you all to show up in blue, white and red to honour the Dutch and French flags.\n\nJUST KIDDING.\n\nWe’d love to see you in your smartest spring attire, but please do wear whatever you’re most comfortable in.",
   "giftTitle": "Gifts",
-  "giftText": "We don't have a gift registry, however, if you want to offer us a gift, we would love a contribution to our honeymoon.\n\nThere will be a gift table at the wedding, or you can send us your contributions <a target='_blank' href='https://www.leetchi.com/c/bonnie-antoines-wedding?utm_source=copylink&utm_medium=social_sharing' rel='noreferrer'>here</a>.",
-  "chooseYourMenu": "Choose your menu"
+  "giftText": "We don't have a gift registry, however, if you want to offer us a gift, we would love a contribution to our honeymoon.\n\nThere will be a gift table at the wedding, or you can send us your contributions <donate>here</donate>.",
+  "chooseYourMenu": "Choose your menu",
+  "openSourceBadge": "Open source on GitHub",
+  "opensInNewTab": "opens in a new tab"
 }

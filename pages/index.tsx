@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
 
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import Layout from "../src/components/layout";
 
 const Home: NextPage = () => {
@@ -20,17 +20,21 @@ const Home: NextPage = () => {
         {t("weddingDateAndTime")}
         <br></br>
         <br></br>
+        {/* CUSTOMIZE: Google Maps link to your venue (also used in pages/info/index.tsx). */}
         <a href="https://goo.gl/maps/WDnfZMKcNV65ZeVB8" rel="noreferrer" target="_blank" className={styles.link}>
             <FontAwesomeIcon icon={faMapPin} /> {t("weddingLocation")}
           </a>
       </h2>
+      {/* CUSTOMIZE: optional RSVP link. Uncomment it, set your form URL and the
+          `weddingConfirmationCTA` text in public/locales/<lang>/common.json. */}
       {/* <a
         className={styles.card}
         target="_blank"
         href="https://forms.gle/EZonTT83boCHZTMWA"
       >
         <p>{t("weddingConfirmationCTA")}</p>
-      </a> */}
+      </a>
+      */}
     </Layout >
   );
 };
